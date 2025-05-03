@@ -75,14 +75,14 @@ body {
     overflow: hidden;
 }
 
-/* #particles-js {
+#particles-js {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;                     for the effect to be only on home page
-} */
+    z-index: 1;                    
+}
 
 #particles-js {
     position: fixed;
@@ -235,7 +235,7 @@ body {
     background: #1a1a1a;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(255 ElasticSearch, 255, 255, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -371,6 +371,117 @@ body {
 
 .resume-overview li strong {
     color: #00c4b4;
+}
+
+/* Timeline Section */
+.timeline-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+    position: relative;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: linear-gradient(to bottom, #00c4b4, #7b2cbf);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin: 40px 0;
+    opacity: 0;
+    transition: all 0.6s ease-out;
+}
+
+.timeline-item.visible {
+    opacity: 1;
+}
+
+.timeline-item.left {
+    transform: translateX(-100px);
+}
+
+.timeline-item.right {
+    transform: translateX(100px);
+}
+
+.timeline-item.left.visible {
+    transform: translateX(0);
+}
+
+.timeline-item.right.visible {
+    transform: translateX(0);
+}
+
+.timeline-card {
+    background: #1a1a1a;
+    border-radius: 10px;
+    padding: 20px;
+    width: 45%;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.timeline-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+.timeline-year {
+    position: absolute;
+    top: -20px;
+    width: 60px;
+    height: 60px;
+    background: #7b2cbf;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(123, 44, 191, 0.5);
+    transition: transform 0.3s;
+}
+
+.timeline-card:hover .timeline-year {
+    transform: rotate(360deg);
+}
+
+.timeline-item.left .timeline-card {
+    margin-right: 55%;
+    text-align: right;
+}
+
+.timeline-item.right .timeline-card {
+    margin-left: 55%;
+    text-align: left;
+}
+
+.timeline-item.left .timeline-year {
+    right: -30px;
+}
+
+.timeline-item.right .timeline-year {
+    left: -30px;
+}
+
+.timeline-card h3 {
+    font-size: 20px;
+    color: #00c4b4;
+    margin-bottom: 10px;
+}
+
+.timeline-card p {
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 /* Testimonials Section */
@@ -542,5 +653,31 @@ footer {
 
     .hero-content h3 {
         font-size: 20px;
+    }
+
+    /* Responsive Timeline */
+    .timeline-content::before {
+        left: 30px;
+    }
+
+    .timeline-item {
+        margin: 20px 0;
+    }
+
+    .timeline-card {
+        width: 100%;
+        margin: 0 0 0 60px;
+        text-align: left;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        transform: translateX(0);
+    }
+
+    .timeline-item.left .timeline-year,
+    .timeline-item.right .timeline-year {
+        left: -30px;
+        right: auto;
     }
 }

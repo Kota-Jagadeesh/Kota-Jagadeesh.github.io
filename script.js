@@ -1,3 +1,6 @@
+// Debug: Log to check if script is running
+console.log('Script.js loaded');
+
 // Smooth Scroll for Navigation Links
 document.querySelectorAll('.nav-link, .back-to-top').forEach(link => {
     link.addEventListener('click', function(e) {
@@ -5,6 +8,7 @@ document.querySelectorAll('.nav-link, .back-to-top').forEach(link => {
         const targetId = this.getAttribute('href');
         const targetSection = document.querySelector(targetId);
         targetSection.scrollIntoView({ behavior: 'smooth' });
+        console.log(`Navigating to ${targetId}`);
     });
 });
 
@@ -14,6 +18,7 @@ const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+    console.log('Hamburger menu toggled');
 });
 
 // Form Submission (Placeholder)
@@ -22,6 +27,7 @@ contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     alert('Thank you for your message! This is a placeholder; form submission is not implemented.');
     contactForm.reset();
+    console.log('Form submitted');
 });
 
 // Animate Progress Bars on Scroll
@@ -34,18 +40,25 @@ const animateProgress = () => {
             bar.style.width = bar.getAttribute('style').split(': ')[1];
         });
         window.removeEventListener('scroll', animateProgress);
+        console.log('Progress bars animated');
     }
 };
 
 window.addEventListener('scroll', animateProgress);
 
-// Fade-in Animation for Sections
+// Fade-in Animation for Sections and Timeline Items
 const sections = document.querySelectorAll('.section');
+const timelineItems = document.querySelectorAll('.timeline-item');
 
 const fadeInSections = () => {
     sections.forEach(section => {
         if (section.getBoundingClientRect().top < window.innerHeight - 50) {
             section.classList.add('visible');
+        }
+    });
+    timelineItems.forEach(item => {
+        if (item.getBoundingClientRect().top < window.innerHeight - 50) {
+            item.classList.add('visible');
         }
     });
 };
@@ -80,6 +93,8 @@ particlesJS('particles-js', {
         modes: { grab: { distance: 140, line_linked: { opacity: 1 } }, push: { particles_nb: 4 } }
     },
     retina_detect: true
+}, () => {
+    console.log('Particles.js initialized');
 });
 
 // Typing Effect for Hero Section
@@ -130,4 +145,5 @@ document.addEventListener('DOMContentLoaded', () => {
             section.classList.add('visible');
         }
     });
+    console.log('Page loaded, typing effect started');
 });
