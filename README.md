@@ -1,5 +1,4 @@
-# 🌟 My Personal Website 🌟
-
+# 👉 **Click here to visit**: [🌟 My Personal Website 🌟](https://Jagadeesh-18-bot.github.io)  
 Welcome to the repository for my personal website! 🚀 This site showcases my portfolio, projects, and a bit about me. It is deployed on **GitHub Pages** for easy access. 
 
 ## 📌 Overview
@@ -13,7 +12,7 @@ This website serves as a digital hub to highlight:
 ## 🌐 View the Website
 
 The website is live and hosted on GitHub Pages! 🎉  
-👉 **Click here to visit**: [My Personal Website](https://Jagadeesh-18-bot.github.io)  
+👉 **Click here to visit**: [🌟 My Personal Website 🌟](https://Jagadeesh-18-bot.github.io)  
 
 ## 🛠️ Technologies Used
 
@@ -24,10 +23,4 @@ This website is built with modern web technologies to ensure a seamless and resp
 - **JavaScript** ⚡
 - **GitHub Pages** for deployment 🌍
 
-## 🚀 Getting Started
 
-To run this website locally or contribute to its development, follow these steps:
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
