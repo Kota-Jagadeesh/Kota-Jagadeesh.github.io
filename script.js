@@ -103,8 +103,8 @@ const typewriterTitle = document.getElementById('typewriter-title');
 const typewriterDesc = document.getElementById('typewriter-desc');
 
 const texts = [
-    { element: typewriterName, text: 'Hello, I’m Jagadeesh Kota 👋', speed: 100 },
-    { element: typewriterTitle, text: 'B.Tech AIDS Student | Developer | amFOSS Member 💻', speed: 80 },
+    { element: typewriterName, text: 'Hey there, I’m Jagadeesh Kota 👋', speed: 100 },
+    { element: typewriterTitle, text: 'B.Tech AI & DS Student | Developer | amFOSS Member 💻', speed: 80 },
     { element: typewriterDesc, text: 'Passionate about AI, Data Science, and innovative solutions 🌟.', speed: 60 }
 ];
 
