@@ -3,61 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jagadeesh - Portfolio 🌟</title>
+    <title>VoidRaven - Portfolio 🌟</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <!-- Navigation Bar -->
-    <div id="particles-js"></div> 
-    <header>
-        <nav class="navbar">
-            <div class="logo">VoidRaven 🌟</div>
-            <ul class="nav-links">
-                <li><a href="#home" class="nav-link">Home 🏠</a></li>
-                <li><a href="#about" class="nav-link">About ℹ️</a></li>
-                <li><a href="#personal" class="nav-link">Personal Info 👤</a></li>
-                <li><a href="#projects" class="nav-link">Projects 🚀</a></li>
-                <li><a href="#skills" class="nav-link">Skills 🛠️</a></li>
-                <li><a href="#certificates" class="nav-link">Certificates 🎓</a></li>
-                <li><a href="#resume" class="nav-link">Resume 📄</a></li>
-                <li><a href="#contact" class="nav-link">Contact 📩</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
+<body data-theme="dark">
+    <nav class="navbar">
+        <div class="logo">VoidRaven 🌟</div>
+        <ul class="nav-links">
+            <li><a href="#hero" class="nav-link">Home 🏠</a></li>
+            <li><a href="#about" class="nav-link">About ℹ️</a></li>
+            <li><a href="#personal" class="nav-link">Personal Info 👤</a></li>
+            <li><a href="#projects" class="nav-link">Projects 🚀</a></li>
+            <li><a href="#skills" class="nav-link">Skills 🛠️</a></li>
+            <li><a href="#certificates" class="nav-link">Certificates 🎓</a></li>
+            <li><a href="#resume" class="nav-link">Resume 📄</a></li>
+            <li><a href="#contact" class="nav-link">Contact 📩</a></li>
+        </ul>
+        <div class="theme-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon" style="display: none;"></i>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <!-- <div id="particles-js"></div> only for homepage -->
+    <section id="hero" class="hero">
+        <div id="particles-js"></div>
         <div class="hero-content">
-            <img src="public/me.png" alt="Your Photo" class="hero-img">
-            <h1 class="typewriter" id="typewriter-name"></h1>
-            <h3 class="typewriter" id="typewriter-title"></h3>
-            <p class="typewriter" id="typewriter-desc"></p>
+            <img src="public/me.png" alt="Jagadeesh Kota" class="hero-img">
+            <h1 id="typewriter-name" class="typewriter"></h1>
+            <h3 id="typewriter-title" class="typewriter"></h3>
+            <p id="typewriter-desc" class="typewriter"></p>
             <a href="#projects" class="btn">View My Work 🚀</a>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="section">
         <h2>About Me ℹ️</h2>
         <div class="about-content">
-            <img src="public/JAGADEESH.png" alt="Your Photo" class="about-img">
+            <img src="public/JAGADEESH.png" alt="About Jagadeesh" class="about-img">
             <div class="about-text">
-                <p>I’m a B.Tech student in Artificial Intelligence and Data Science at Amrita Vishwa Vidyapeetham, Kerala 🌴. As an active member of <strong>amFOSS</strong> 💻, I contribute to open-source projects and collaborate on innovative solutions.</p>
-                <p>My interests include Machine learning, web dev, and 📱 Mobile dev, with a goal to create impactful technologies 🌟.</p>
+                <p>I’m a B.Tech student in Artificial Intelligence and Data Science at Amrita Vishwa Vidyapeetham, Kerala 🌴. As an active member of amFOSS 💻, I contribute to open-source projects and collaborate on innovative solutions.</p>
+                <p>My interests include Machine Learning, Web Development, and 📱 Mobile Development, with a goal to create impactful technologies 🌟.</p>
                 <a href="#contact" class="btn">Get in Touch 📩</a>
             </div>
         </div>
     </section>
 
-    <!-- Personal Info Section -->
     <section id="personal" class="section">
         <h2>Personal Info 👤</h2>
         <div class="personal-content">
@@ -76,62 +75,53 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="section">
         <h2>My Projects 🚀</h2>
+        <div class="project-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="ai">AI</button>
+        </div>
         <div class="projects-grid">
-            <!-- <div class="project-card">
-                <img src="https://via.placeholder.com/400x250" alt="Project 1">
-                <h3>Movie Recommendation System 🎬</h3>
-                <p>A machine learning-based system using collaborative filtering 📊.</p>
-                <a href="#" class="btn">View Project 🔗</a>
-            </div> -->
-            <div class="project-card">
-                <img src="public/LETTERBOXD.jpeg" alt="Project 2">
+            <div class="project-card" data-category="web">
+                <img src="public/LETTERBOXD.jpeg" alt="Letterboxd">
                 <h3>Letterboxd 🌟</h3>
                 <p>A React and Next.js web app for movie ratings and watchlists 🎥.</p>
-                <a href="https://github.com/Kota-Jagadeesh/LetterBoxd.git" class="btn">View Project 🔗</a>
+                <a href="https://github.com/Kota-Jagadeesh/LETTERBOXD.git" class="btn view-project">View Project 🔗</a>
             </div>
-            <div class="project-card">
-                <img src="public/POKE-DEX.webp" alt="Pokédex Project">
+            <div class="project-card" data-category="mobile">
+                <img src="public/POKE-DEX.webp" alt="Pok-Codéx">
                 <h3>Pok-Codéx Powered by Flutter! 🐾🤖</h3>
-                <p>A modern, feature-rich Pokédex app built with Flutter — search, explore, and manage Pokémons.. Catch 'em all! 🌟💬</p>
-                <a href="https://github.com/Kota-Jagadeesh/Pok-Codex.git" class="btn">Check Out the Project! 🔗⚡️</a>
+                <p>A modern, feature-rich Pokédex app built with Flutter — search, explore, and manage Pokémons. Catch 'em all! 🌟💬</p>
+                <a href="https://github.com/Kota-Jagadeesh/Pok-Codex.git" class="btn view-project">Check Out the Project! 🔗⚡️</a>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills" class="section">
         <h2>My Skills 🛠️</h2>
         <div class="skills-grid">
             <div class="skill-item">
                 <i class="fab fa-python"></i>
                 <h4>Python 🐍</h4>
-                <div class="progress-bar"><div class="progress" style="width: 50%;"></div></div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 0;" data-width="90%"></div>
+                </div>
             </div>
             <div class="skill-item">
                 <i class="fab fa-react"></i>
                 <h4>React & Next.js ⚛️</h4>
-                <div class="progress-bar"><div class="progress" style="width: 50%;"></div></div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 0;" data-width="85%"></div>
+                </div>
             </div>
-            <!-- <div class="skill-item">
-                <i class="fas fa-brain"></i>
-                <h4>Machine Learning 🧠</h4>
-                <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-database"></i>
-                <h4>Data Analysis 📈</h4>
-                <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
-            </div> -->
         </div>
     </section>
 
-    <!-- Certificates Section -->
     <section id="certificates" class="section">
         <h2>My Certificates 🎓</h2>
-        <b>WILL UPDATE SOON ....</b>
+        <p>WILL UPDATE SOON ....</p>
         <!-- <div class="certificates-grid">
             <div class="certificate-card">
                 <img src="https://via.placeholder.com/300x200" alt="Certificate 1">
@@ -152,28 +142,27 @@
                 <a href="#" class="btn">View Certificate 🔗</a>
             </div>
         </div> -->
-    </section> 
+    </section>
 
-    <!-- Resume Section -->
     <section id="resume" class="section">
         <h2>My Resume 📄</h2>
         <div class="resume-content">
             <p>Download my resume to explore my education, skills, and experience 🌟.</p>
-            <a href="public/RESUME1.pdf" download class="btn">Download Resume ⬇️</a>
+            <a href="public/RESUME1.pdf" class="btn">Download Resume ⬇️</a>
             <div class="resume-overview">
                 <h3>Overview 📋</h3>
                 <ul>
-                    <li><strong>Education</strong>: B.Tech in AI & Data Science , Amrita Vishwa Vidyapeetham (2025–Present) 🎓</li>
-                    <li><strong>Skills</strong>: Python, React, JavaScript, Flutter  🛠️</li>
+                    <li><strong>Education:</strong> B.Tech in AI & Data Science, Amrita Vishwa Vidyapeetham (2025–Present) 🎓</li>
+                    <li><strong>Skills:</strong> Python, React, JavaScript, Flutter 🛠️</li>
                     <!-- <li><strong>Experience</strong>: Active contributor at amFOSS, developing open-source projects 💻</li> -->
-                    <li><strong>Experience</strong>: Member @amFOSS 💻</li>
+                    <li><strong>Experience:</strong> Member @amFOSS 💻</li>
                 </ul>
             </div>
         </div>
     </section>
 
     <!-- Timeline Section -->
-    <!-- <section id="timeline" class="section">
+    <section id="timeline" class="section">
         <h2>My Educational Journey ⏳</h2>
         <div class="timeline-content">
             <div class="timeline-item left">
@@ -198,7 +187,7 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section> 
 
     <!-- Testimonials Section -->
     <!-- <section id="testimonials" class="section">
@@ -217,34 +206,34 @@
     </section>  -->
 
     <!-- Contact Section -->
+
     <section id="contact" class="section">
         <h2>Contact Me 📩</h2>
         <form class="contact-form">
-            <input type="text" placeholder="Your Name 👤" required>
-            <input type="email" placeholder="Your Email 📧" required>
-            <textarea placeholder="Your Message 💬" required></textarea>
+            <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
+            <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email">
+            <textarea name="message" placeholder="Your Message" required aria-label="Your Message"></textarea>
             <button type="submit" class="btn">Send Message 🚀</button>
         </form>
         <div class="social-links">
-            <a href="https://github.com/Kota-Jagadeesh" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/jagadeeshwar-reddy-kota-48673a334?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/jagadeeshwar-reddy" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Kota-Jagadeesh" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
             <a href="mailto:kota.jagadesh123@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <p>© 2025 Jagadeesh kota. All Rights Reserved. 🌟</p>
+        <p>© 2025 Jagadeesh Kota. All Rights Reserved. 🌟</p>
         <div class="footer-social">
-            <a href="https://github.com/Kota-Jagadeesh" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/jagadeeshwar-reddy-kota-48673a334?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/jagadeeshwar-reddy" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Kota-Jagadeesh" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
     <a href="#home" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
 
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
