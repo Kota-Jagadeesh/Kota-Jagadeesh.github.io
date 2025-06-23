@@ -182,14 +182,14 @@ body {
 }
 
 .hero-content h1 {
-    font-size: 48px;
+    font-size: 25px;
     margin-bottom: 10px;
     font-family: 'Montserrat', sans-serif;
     text-shadow: 0 2px 4px rgba(0, 196, 180, 0.3);
 }
 
 .hero-content h3 {
-    font-size: 24px;
+    font-size: 20px;
     color: var(--accent1);
     margin-bottom: 15px;
 }
