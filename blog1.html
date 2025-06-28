@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Journey into AI and Data Science - VoidRaven 🌟</title>
+    <link rel="stylesheet" href="blog1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="background-animation"></div>
+    <header class="blog-header">
+        <div class="container">
+            <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+            <h1>My Journey into AI and Data Science 🤖</h1>
+            <div class="blog-meta">
+                <span class="blog-date">January 15, 2025</span>
+                <span class="blog-read-time">5 min read</span>
+                <span class="blog-category">Education</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="blog-content">
+        <div class="container">
+            <img src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=800&h=400&fit=crop" alt="AI Journey" class="blog-image">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <img src="https://images.unsplash.com/photo-1516321310766-61b7b8e66d81?w=600&h=300&fit=crop" alt="AI Concept" class="blog-image">
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+            <div class="blog-tags">
+                <span class="blog-tag">AI</span>
+                <span class="blog-tag">Data Science</span>
+                <span class="blog-tag">Education</span>
+                <span class="blog-tag">University</span>
+            </div>
+            <a href="index.html#blog" class="btn return-btn">Return Back ⬅️</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Jagadeesh Kota. All Rights Reserved. 🌟</p>
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Background Animation (Bubbles and Stars) for Blog1
+        const background = document.querySelector('.background-animation');
+        const bubbleCount = 5; // Reduced to 5 for minimal attractive design
+        const starCount = 10;  // Added 10 twinkling stars
+
+        // Create Bubbles
+        for (let i = 0; i < bubbleCount; i++) {
+            const bubble = document.createElement('div');
+            bubble.classList.add('bubble');
+            bubble.style.width = `${Math.random() * 40 + 20}px`; // 20-60px
+            bubble.style.height = bubble.style.width;
+            bubble.style.left = `${Math.random() * 100}vw`;
+            bubble.style.animationDuration = `${Math.random() * 15 + 5}s`; // 5-20s
+            bubble.style.animationDelay = `${Math.random() * 5}s`;
+            bubble.style.setProperty('--random-x', Math.random() * 2 - 1); // -1 to 1 for direction
+            background.appendChild(bubble);
+        }
+
+        // Create Twinkling Stars
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.width = `${Math.random() * 3 + 1}px`; // 1-4px
+            star.style.height = star.style.width;
+            star.style.left = `${Math.random() * 100}vw`;
+            star.style.top = `${Math.random() * 100}vh`;
+            star.style.animationDelay = `${Math.random() * 5}s`;
+            background.appendChild(star);
+        }
+    </script>
+</body>
+</html>

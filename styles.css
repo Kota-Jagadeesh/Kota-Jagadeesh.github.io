@@ -76,15 +76,6 @@ body {
 }
 
 #particles-js {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;                    
-}
-
-#particles-js {
     position: fixed;
     top: 0;
     left: 0;
@@ -235,7 +226,7 @@ body {
     background: #1a1a1a;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(255 ElasticSearch, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -484,6 +475,51 @@ body {
     line-height: 1.6;
 }
 
+/* Blog Section */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-card {
+    background: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-card h3 {
+    font-size: 22px;
+    margin: 20px;
+    color: #ffffff;
+}
+
+.blog-card p {
+    font-size: 16px;
+    margin: 0 20px 20px;
+}
+
+.blog-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px 20px;
+}
+
 /* Testimonials Section */
 .testimonials-grid {
     display: grid;
@@ -604,6 +640,62 @@ footer {
     transform: scale(1.1);
 }
 
+/* Blog Section */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-card {
+    position: relative;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.blog-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hexagon {
+    position: relative;
+    width: 200px;
+    height: 115.47px; /* Height for a regular hexagon: width * sin(60°) ≈ width * 0.577 */
+    margin: 20px auto;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    overflow: hidden;
+}
+
+.hexagon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-card h3 {
+    font-size: 22px;
+    margin: 15px 20px;
+    color: #ffffff;
+}
+
+.blog-card p {
+    font-size: 16px;
+    margin: 0 20px 20px;
+    color: #cccccc;
+}
+
+.blog-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 0 20px 20px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
@@ -679,5 +771,11 @@ footer {
     .timeline-item.right .timeline-year {
         left: -30px;
         right: auto;
+    }
+
+    /* Responsive Blog */
+    .blog-buttons {
+        flex-direction: column;
+        gap: 10px;
     }
 }
