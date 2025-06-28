@@ -1,0 +1,237 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body styling with black background and star effects */
+body {
+    background: #000; /* Black background */
+    color: #e0e0e0; /* Light text for contrast */
+    scroll-behavior: smooth;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Background animation */
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.bubble {
+    position: absolute;
+    background: rgba(79, 195, 247, 0.4); /* Light blue bubbles */
+    border-radius: 50%;
+    animation: float 15s infinite linear;
+    box-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
+}
+
+.star {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8); /* White stars */
+    border-radius: 50%;
+    animation: twinkle 3s infinite ease-in-out alternate;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) translateX(0);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(calc(var(--random-x) * 100px));
+        opacity: 0.2;
+    }
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+}
+
+/* Container styling */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header styling */
+.blog-header {
+    padding: 60px 20px;
+    text-align: center;
+    margin: 20px 0;
+    background: rgba(26, 26, 46, 0.8); /* Semi-transparent dark header */
+}
+
+.blog-header h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #4fc3f7; /* Bright accent for title */
+    font-weight: 600;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.blog-meta {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 14px;
+    color: #bbdefb; /* Light blue for meta */
+}
+
+.blog-date, .blog-read-time, .blog-category {
+    background: rgba(187, 222, 251, 0.5);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+/* Blog content styling */
+.blog-content {
+    padding: 60px 20px;
+    margin: 20px 0;
+}
+
+.section-title {
+    font-size: 1.8em;
+    color: #4fc3f7;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px #000;
+}
+
+.blog-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    margin: 25px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.blog-image:hover {
+    transform: rotate(2deg) scale(1.02);
+}
+
+.blog-content p {
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+    color: #d3d3d3; /* Light gray for readability */
+}
+
+.blog-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.blog-tag {
+    background: #4fc3f7;
+    color: #ffffff;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.blog-tag:hover {
+    background: #0288d1;
+}
+
+.btn.return-btn {
+    display: inline-block;
+    padding: 12px 35px;
+    background: #4fc3f7;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    margin-top: 30px;
+}
+
+.btn.return-btn:hover {
+    background: #0288d1;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(79, 195, 247, 0.3);
+}
+
+/* Footer styling */
+footer {
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 40px;
+    background: rgba(26, 26, 46, 0.8);
+}
+
+.footer-social {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-social a {
+    color: #4fc3f7;
+    font-size: 22px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer-social a:hover {
+    color: #0288d1;
+    transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-header h1 {
+        font-size: 32px;
+    }
+
+    .blog-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .blog-content {
+        padding: 40px 20px;
+    }
+
+    .blog-image {
+        max-width: 100%;
+    }
+
+    .bubble {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .star {
+        width: 2px !important;
+        height: 2px !important;
+    }
+}
