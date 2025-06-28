@@ -177,7 +177,7 @@ window.addEventListener('scroll', () => {
 // Particles.js Configuration
 particlesJS('particles-js', {
     particles: {
-        number: { value: 200, density: { enable: true, value_area: 500 } },
+        number: { value: 150, density: { enable: true, value_area: 500 } },
         color: { value: '#00c4b4' },
         shape: { type: 'circle' },
         opacity: { value: 0.5, random: true },
