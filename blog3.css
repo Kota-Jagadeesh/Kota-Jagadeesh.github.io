@@ -8,8 +8,8 @@
 
 /* Body styling with black background and star effects */
 body {
-    background: #000; /* Black background */
-    color: #e0e0e0; /* Light text for contrast */
+    background: #000; 
+    color: #e0e0e0; 
     scroll-behavior: smooth;
     position: relative;
     overflow-x: hidden;
@@ -80,7 +80,7 @@ body {
     padding: 60px 20px;
     text-align: center;
     margin: 20px 0;
-    background: rgba(26, 26, 46, 0.8); /* Semi-transparent dark header */
+    /* background: rgba(0, 0, 0, 0.8); Semi-transparent dark header */
 }
 
 .blog-header h1 {
@@ -100,7 +100,7 @@ body {
 }
 
 .blog-date, .blog-read-time, .blog-category {
-    background: rgba(187, 222, 251, 0.5);
+    background: rgba(0, 255, 213, 0.5);
     padding: 6px 12px;
     border-radius: 20px;
     font-weight: 500;
@@ -148,8 +148,8 @@ body {
 }
 
 .blog-tag {
-    background: #4fc3f7;
-    color: #ffffff;
+    background: #ffffff;
+    color: #000000;
     padding: 6px 15px;
     border-radius: 20px;
     font-size: 14px;
@@ -158,20 +158,22 @@ body {
 }
 
 .blog-tag:hover {
-    background: #0288d1;
+    background: #eeff00;
+    color: rgb(0, 0, 0);
 }
-
+    
 .btn.return-btn {
     display: inline-block;
     padding: 12px 35px;
-    background: #4fc3f7;
-    color: #ffffff;
+    background: #ffffff;
+    color: #000000;
     text-decoration: none;
     border-radius: 25px;
     font-size: 16px;
     font-weight: 500;
     transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
     margin-top: 30px;
+    margin-left: 50%;
 }
 
 .btn.return-btn:hover {
@@ -185,7 +187,7 @@ footer {
     padding: 30px 20px;
     text-align: center;
     margin-top: 40px;
-    background: rgba(26, 26, 46, 0.8);
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .footer-social {
@@ -196,13 +198,13 @@ footer {
 }
 
 .footer-social a {
-    color: #4fc3f7;
+    color: #ffffff;
     font-size: 22px;
     transition: color 0.3s, transform 0.3s;
 }
 
 .footer-social a:hover {
-    color: #0288d1;
+    color: #000000;
     transform: scale(1.2);
 }
 
