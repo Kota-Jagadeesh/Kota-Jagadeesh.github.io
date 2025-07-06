@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Journey with amFOSS: Contributing to Open Source as a Beginner</title>
+    <link rel="stylesheet" href="blog3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="background-animation"></div>
+    <header class="blog-header">
+        <div class="container">
+            <h1>My Journey with amFOSS: Contributing to Open Source as a Beginner! 🎉🚀</h1>
+            <div class="blog-meta">
+                <span class="blog-date">June 28, 2025, 02:53 PM IST</span>
+                <span class="blog-read-time">6 min read</span>
+                <span class="blog-category">Technology 🌐</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="blog-content">
+        <div class="container">
+            <h2 class="section-title">A New World of Open Source Awaits! 🌌</h2>
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=400&fit=crop" alt="Open Source Exploration" class="blog-image">
+            <p>Ever wondered what open source is? When I first joined Amrita University, I stumbled upon amFOSS during induction. It was my first encounter with this exciting world! Back in Andhra Pradesh, I studied mathematics, physics, chemistry, and Sanskrit—but zero computer science. 🤔</p>
+            <p><strong>Question for you:</strong> Could you imagine diving into coding with no prior skills? I did! Despite using Windows and lacking programming knowledge, amFOSS seemed like the perfect launchpad to learn CS. Are you ready to take the plunge? 😄</p>
+
+            <h2 class="section-title">Tackling Praveshan: My First Challenge! ⏳💡</h2>
+            <p>Curious about joining amFOSS? The gateway was Praveshan, their recruitment event. I got the task list and knew what to do—but lacked the skills! Each task took 7-10 days as a coding newbie. 😅</p>
+            <p><strong>Challenge for you:</strong> Can you guess how I overcame not knowing tools? I watched tutorials, read documentation, and burned the midnight oil until 1-2 a.m.! By submission, I finished 6 of 10 tasks. First-years got a boost, so I reached the interview—thrilled yet nervous! 🎯</p>
+            <img src="https://images.unsplash.com/photo-1516321310766-61b7b8e66d81?w=600&h=300&fit=crop" alt="Coding Struggle" class="blog-image">
+
+            <h2 class="section-title">The Interview Setback: A Learning Curve! 😞📚</h2>
+            <p>Have you ever faced interview jitters? My online interview was a disaster—I froze, missed the first question, and forgot answers due to nerves. Result? Not selected. But wait—did that stop me? No! I turned it into a learning opportunity. 🌱</p>
+            <p><strong>Fun Fact:</strong> Did you know tension can blank your mind? I spent three months mastering open source, Linux, Git, GitHub, and coding in my hostel—gaining confidence by semester’s end! 💪</p>
+
+            <h2 class="section-title">Praveshan S2: My Redemption Arc! ✨🏆</h2>
+            <p>Ever had a second chance? At 11:50 p.m., scrolling reels at home, I saw Praveshan S2 announced—my shot at redemption! I joined Discord, applied, and tackled tasks with newfound skills, finishing faster and accurately. 🎉</p>
+            <p><strong>Quiz Time:</strong> What kept me calm this time? Experience! The interview went well, and I got the email—I’m in amFOSS! My CS journey began, and I’m now exploring mobile and web development. 🚀</p>
+
+            <h2 class="section-title">Why Explore Open Source? A Must for CS Students! 🌍🎓</h2>
+            <p>Interested in real-world coding? Open source, via amFOSS projects, builds Git and teamwork skills—key for jobs! With tasks, mentorship, and Praveshan, amFOSS guides beginners to confidence and problem-solving. 🌟</p>
+            <p><strong>Your Turn:</strong> Ready to join a supportive community and apply classroom knowledge? It’s your gateway to a tech career! 🤓</p>
+            <div class="blog-tags">
+                <span class="blog-tag">Open Source</span>
+                <span class="blog-tag">amFOSS</span>
+                <span class="blog-tag">Computer Science</span>
+                <span class="blog-tag">Praveshan</span>
+            </div>
+            <a href="index.html#blog" class="btn return-btn">Go Back ↩️</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Jagadeesh. All Rights Reserved. 🌟</p>
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        // Background Animation (Bubbles and Stars) for Blog3
+        const background = document.querySelector('.background-animation');
+        const bubbleCount = 5; // Reduced to 5 for minimal attractive design
+        const starCount = 15;  // Increased to 15 twinkling stars for more effect
+
+        // Create Bubbles
+        for (let i = 0; i < bubbleCount; i++) {
+            const bubble = document.createElement('div');
+            bubble.classList.add('bubble');
+            bubble.style.width = `${Math.random() * 40 + 20}px`; // 20-60px
+            bubble.style.height = bubble.style.width;
+            bubble.style.left = `${Math.random() * 100}vw`;
+            bubble.style.animationDuration = `${Math.random() * 15 + 5}s`; // 5-20s
+            bubble.style.animationDelay = `${Math.random() * 5}s`;
+            bubble.style.setProperty('--random-x', Math.random() * 2 - 1); // -1 to 1 for direction
+            background.appendChild(bubble);
+        }
+
+        // Create Twinkling Stars
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.width = `${Math.random() * 3 + 1}px`; // 1-4px
+            star.style.height = star.style.width;
+            star.style.left = `${Math.random() * 100}vw`;
+            star.style.top = `${Math.random() * 100}vh`;
+            star.style.animationDelay = `${Math.random() * 5}s`;
+            background.appendChild(star);
+        }
+    </script>
+</body>
+</html> 
